@@ -22,5 +22,9 @@ class VertezTest
         Console.WriteLine($"SSWG: {anovaResult.sswgOut}");
         Console.WriteLine($"TSS: {anovaResult.tssOut}");
         Console.WriteLine($"ANOVA Result: {anovaResult.anovaRes}");
+
+        // Calculating Standard Deviation
+        double calcStdev = vertezml.stdevOp.stdev(values);
+        Console.WriteLine($"Standard Deviation: {calcStdev}");
     }
 }
