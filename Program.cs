@@ -14,5 +14,13 @@ class VertezTest
         // Calculating Median
         double medianCalc = vertezml.MedianOp.Median(values);
         Console.WriteLine($"Median: {medianCalc}");
+
+        // Calculating ANOVA
+        List<double> x = new List<double> { 10.0, 20.0, 30.0, 40.0, 50.0, 60.0 };
+        List<double> y = new List<double> { 15.0, 25.0, 35.0, 45.0, 55.0, 65.0 };
+        var anovaResult = vertezml.AnovaOp.Anova(x,y);
+        Console.WriteLine($"SSWG: {anovaResult.sswgOut}");
+        Console.WriteLine($"TSS: {anovaResult.tssOut}");
+        Console.WriteLine($"ANOVA Result: {anovaResult.anovaRes}");
     }
 }
