@@ -8,7 +8,11 @@ class VertezTest
     {   
         // Calculate Mean
         List<double> values = new List<double> { 10, 20, 30, 40, 50 };
-        double calc = vertezml.MeanOp.CalculateMean(values);
-        Console.WriteLine(calc);
+        double calc = vertezml.MeanOp.Mean(values);
+        Console.WriteLine($"Mean: {calc}");
+
+        // Calculating Median
+        double medianCalc = vertezml.MedianOp.Median(values);
+        Console.WriteLine($"Median: {medianCalc}");
     }
 }
